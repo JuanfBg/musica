@@ -70,7 +70,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, AlbumDetailActivity.class);
-                Intent.putExtra(name:"IMA")
+                intent.putExtra("IMG", album.getThumbnail());
                 mContext.startActivity(intent);
 
 

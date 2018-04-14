@@ -12,10 +12,7 @@ public class AlbumDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album_detail);
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_album_detail);
-        ImageView img = findViewById(R.id.imagenAlbum);
+        ImageView img = findViewById(R.id.ImagenAlbum);
 
         Intent intent= getIntent();
         Bundle b =intent.getExtras();
@@ -24,6 +21,9 @@ public class AlbumDetailActivity extends AppCompatActivity {
 
             img.setImageResource(b.getInt("IMG"));
         }
+
+
+
 
 
 
