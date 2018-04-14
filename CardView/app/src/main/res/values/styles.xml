@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/green_a400</item>
+        <item name="colorPrimaryDark">@color/green_a400</item>
+        <item name="colorAccent">@color/green_200</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="NewTheme" parent="Theme.AppCompat.Light.DarkActionBar" >
+        <item name="colorPrimary">@color/green_600</item>
+        <item name="colorPrimaryDark">@color/green_600</item>
+        <item name="colorAccent">@color/green_200</item>
+        <item name="android:colorBackground">@color/amber_600</item>
+    </style>
+<style name="title1">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+<item name="android:textColor">#ffffff</item>
+    <item name="android:textSize">30dp</item>
+    <item name="android:text">@string/backdrop_title</item>
+<item name="android:typeface">serif</item>
+
+
+    </style>
+    <style name="subTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">@dimen/backdrop_subtitle</item>
+        <item name="android:text">@string/backdrop_subtitle</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="Nombre_Cancion">
+      <item name= "android:layout_width"> wrap_content</item>
+       <item name= "android:layout_height">wrap_content</item>
+        <item name= "android:layout_marginBottom">24dp</item>
+
+
+        android:textSize="30sp"
+
+
+    </style>
+
+
+
+
+
+
+
+
+</resources>

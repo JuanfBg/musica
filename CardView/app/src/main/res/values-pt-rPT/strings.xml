@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplicação de música</string>
+    <string name="action_settings">Configuração</string>
+    <string name="action_add_favourite">Adicionar aos favoritos</string>
+    <string name="action_play_next">Próxima música</string>
+    <string name="backdrop_title">Música para o momento</string>
+    <string name="backdrop_subtitle">Os melhores 20</string>
+    <string name="song">canções</string>
+    <string name="True_Romance">True Romance</string>
+    <string name="Xscape">Xscape</string>
+    <string name="Maroon_5">Marron 5</string>
+    <string name="Born_to_Die">Born to die</string>
+    <string name="Honeymoon">Honeymoon</string>
+    <string name="I_need_a_Doctor">I need a Doctor</string>
+    <string name="Loud">Loud</string>
+    <string name="Legend">Legend</string>
+    <string name="Hello">Hello</string>
+    <string name="Greatest_hits">Greatest_hits</string>
+    <string name="Master">Master of Puppets</string>
+    <string name="Meteora">Meteora</string>
+    <string name="Memories">Memories... Do Not Open</string>
+</resources>
