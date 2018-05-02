@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,7 +18,13 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by juanf on 1/05/2018.
+ */
+
+public class EpisodeActivity extends AppCompatActivity {
+
+
 
     private RecyclerView recyclerView;
     private AlbumsAdapter adapter;
@@ -28,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_album_detail2);
+      /*  Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);*/
 
         initCollapsingToolbar();
 
@@ -41,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
+        recyclerView.addItemDecoration(new MainActivity.GridSpacingItemDecoration(2, dpToPx(10), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
         prepareAlbums();
@@ -91,39 +96,39 @@ public class MainActivity extends AppCompatActivity {
     private void prepareAlbums() {
         int[] covers = new int[]{
                 R.drawable.cover2,
-                R.drawable.album1,
-                R.drawable.album2,
-                R.drawable.album3,
-                R.drawable.album4,
-                R.drawable.album5,
-                R.drawable.album6,
-                R.drawable.album7,
-                R.drawable.album8
+                R.drawable.logo,
+                R.drawable.logo,
+                R.drawable.logo,
+                R.drawable.logo,
+                R.drawable.logo,
+                R.drawable.logo,
+                R.drawable.logo,
+                R.drawable.logo,
+                R.drawable.logo,
+                R.drawable.logo
+
         };
-
-        Album a = new Album(this.getString(R.string.Game_Thrones),7, covers[1]);
+        Album a = new Album(this.getString(R.string.cap0),7, covers[1]);
         albumList.add(a);
 
-        a = new Album(this.getString(R.string.Devil), 3, covers[2]);
+        a = new Album(this.getString(R.string.cap2), 3, covers[2]);
         albumList.add(a);
 
-        a = new Album(this.getString(R.string.Dark), 1, covers[3]);
+        a = new Album(this.getString(R.string.cap3), 1, covers[3]);
         albumList.add(a);
 
-        a = new Album(this.getString(R.string.TBT), 9, covers[4]);
+        a = new Album(this.getString(R.string.cap4), 9, covers[4]);
         albumList.add(a);
 
-        a = new Album(this.getString(R.string.Black), 5, covers[5]);
+        a = new Album(this.getString(R.string.cap5), 5, covers[5]);
         albumList.add(a);
 
-        a = new Album(this.getString(R.string.Reasons), 1, covers[6]);
+        a = new Album(this.getString(R.string.cap6), 1, covers[6]);
         albumList.add(a);
 
-        a = new Album(this.getString(R.string.BB), 3, covers[7]);
+        a = new Album(this.getString(R.string.cap7), 3, covers[7]);
         albumList.add(a);
 
-        a = new Album(this.getString(R.string.Fuck), 1, covers[8]);
-        albumList.add(a);
 
 
         adapter.notifyDataSetChanged();
@@ -132,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * RecyclerView item decoration - give equal margin around grid item
      */
-    public static class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
+    public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
 
         private int spanCount;
         private int spacing;
@@ -175,3 +180,4 @@ public class MainActivity extends AppCompatActivity {
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
     }
 }
+

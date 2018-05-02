@@ -5,15 +5,15 @@ package co.edu.konradlorenz.cardview;
  */
 public class Album {
     private String name;
-    private int numOfSongs;
+    private int numOfCaps;
     private int thumbnail;
 
     public Album() {
     }
 
-    public Album(String name, int numOfSongs, int thumbnail) {
+    public Album(String name, int numOfCaps, int thumbnail) {
         this.name = name;
-        this.numOfSongs = numOfSongs;
+        this.numOfCaps = numOfCaps;
         this.thumbnail = thumbnail;
     }
 
@@ -25,12 +25,12 @@ public class Album {
         this.name = name;
     }
 
-    public int getNumOfSongs() {
-        return numOfSongs;
+    public int getNumOfCaps() {
+        return numOfCaps;
     }
 
-    public void setNumOfSongs(int numOfSongs) {
-        this.numOfSongs = numOfSongs;
+    public void setNumOfCaps(int numOfCaps) {
+        this.numOfCaps = numOfCaps;
     }
 
     public int getThumbnail() {

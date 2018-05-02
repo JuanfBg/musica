@@ -69,18 +69,19 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
         holder.elementView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, AlbumDetailActivity.class);
+                Intent intent = new Intent(mContext, SeasonsActivity.class);
                 intent.putExtra("IMG", album.getThumbnail());
                 mContext.startActivity(intent);
 
-
-
-
+              /*  Intent intent2 = new Intent(mContext, EpisodeActivity.class);
+                intent2.putExtra("IMG2", album.getThumbnail());
+                mContext.startActivity(intent2);*/
 
             }
+
         });
         holder.title.setText(album.getName());
-        holder.count.setText(album.getNumOfSongs() + " " + mContext.getString(R.string.song));
+        holder.count.setText(album.getNumOfCaps() + " " + mContext.getString(R.string.Chapter));
 
         // loading album cover using Glide library
         Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
@@ -89,6 +90,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
             @Override
             public void onClick(View view) {
                 showPopupMenu(holder.overflow);
+
             }
         });
     }
@@ -123,10 +125,15 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
         public boolean onMenuItemClick(MenuItem menuItem) {
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
-                    Toast.makeText(mContext,mContext.getString(R.string.action_add_favourite), Toast.LENGTH_SHORT).show();
+                    Intent intent2 = new Intent(mContext, EpisodeActivity.class);
+
+                    mContext.startActivity(intent2);
                     return true;
                 case R.id.action_play_next:
                     Toast.makeText(mContext,mContext.getString(R.string.action_play_next), Toast.LENGTH_SHORT).show();
+                    Intent intent3 = new Intent(mContext, prueba.class);
+
+                    mContext.startActivity(intent3);
                     return true;
                 default:
             }

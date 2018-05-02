@@ -50,7 +50,7 @@
                     <TextView
                         style="@style/title1"
                         android:id="@+id/love_music"
-                        android:text="@string/Game_Thrones"
+                        android:text="@string/cap0"
                         android:layout_marginTop="10dp"
 
 
@@ -59,16 +59,11 @@
 
                     <TextView
                         style="@style/subTitle"
-                        android:text="@string/Gender_Action"
+                        android:text="@string/duration"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         />
-                    <TextView
-                        style="@style/subTitle"
-                        android:text="@string/Actors"
 
-
-                        />
                 </LinearLayout>
             </RelativeLayout>
 
@@ -83,6 +78,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <include layout="@layout/content_epi" />
 
 </android.support.design.widget.CoordinatorLayout>

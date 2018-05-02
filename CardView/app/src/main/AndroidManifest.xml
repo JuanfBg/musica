@@ -18,7 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AlbumDetailActivity"></activity>
+
+        <activity android:name=".SeasonsActivity"></activity>
+        <activity android:name=".EpisodeActivity"></activity>
+
+        <activity android:name=".prueba"></activity>
     </application>
 
 </manifest>

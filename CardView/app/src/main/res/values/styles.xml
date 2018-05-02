@@ -13,6 +13,7 @@
         <item name="colorPrimary">@color/green_a400</item>
         <item name="colorPrimaryDark">@color/green_a400</item>
         <item name="colorAccent">@color/green_200</item>
+        <item name="android:windowBackground">@android:color/background_dark</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
@@ -21,18 +22,32 @@
         <item name="colorPrimary">@color/green_600</item>
         <item name="colorPrimaryDark">@color/green_600</item>
         <item name="colorAccent">@color/green_200</item>
-        <item name="android:colorBackground">@color/amber_600</item>
+        <item name="android:colorBackground">@color/green</item>
     </style>
 <style name="title1">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
-<item name="android:textColor">#ffffff</item>
+    <item name="android:textColor">#ffffff</item>
     <item name="android:textSize">30dp</item>
     <item name="android:text">@string/backdrop_title</item>
-<item name="android:typeface">serif</item>
+    <item name="android:typeface">serif</item>
 
 
     </style>
+
+    <style name="title2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:text">@string/Game_Thrones</item>
+        <item name="android:typeface">serif</item>
+
+
+    </style>
+
+
+
     <style name="subTitle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
