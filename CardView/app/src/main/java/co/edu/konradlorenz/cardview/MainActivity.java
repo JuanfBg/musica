@@ -1,38 +1,62 @@
 package co.edu.konradlorenz.cardview;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.transition.Slide;
+import android.transition.Transition;
 import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.support.v4.content.ContextCompat.startActivity;
+import static co.edu.konradlorenz.cardview.AlbumsAdapter.DURACION;
+
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private AlbumsAdapter adapter;
     private List<Album> albumList;
+    private Transition transition;
+    public static final long DURACION = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
         initCollapsingToolbar();
+        Slide slideBottom = new Slide(Gravity.BOTTOM);
+        slideBottom.setDuration(DURACION);
+        slideBottom.setInterpolator(new DecelerateInterpolator());
+
+        getWindow().setAllowReturnTransitionOverlap(false); //Evitar que las transiciones se envien a la vez
+        getWindow().setReenterTransition(slideBottom);
+
+
+
+
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
@@ -174,4 +198,28 @@ public class MainActivity extends AppCompatActivity {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
     }
+
+
+
+
+    private void iniciarActividad(){
+        transition.setDuration(DURACION);
+        transition.setInterpolator(new DecelerateInterpolator());
+        getWindow().setExitTransition(transition);
+        Intent intent = new Intent(this,EpisodeActivity.class);
+        startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

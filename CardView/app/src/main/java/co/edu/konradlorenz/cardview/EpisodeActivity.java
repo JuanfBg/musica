@@ -1,16 +1,21 @@
 package co.edu.konradlorenz.cardview;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Slide;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -29,6 +34,7 @@ public class EpisodeActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private AlbumsAdapter adapter;
     private List<Album> albumList;
+    public static final long DURACION = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +46,13 @@ public class EpisodeActivity extends AppCompatActivity {
         initCollapsingToolbar();
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        Slide slideBottom = new Slide(Gravity.BOTTOM);
+        slideBottom.setDuration(DURACION);
+        slideBottom.setInterpolator(new DecelerateInterpolator());
+
+        getWindow().setAllowReturnTransitionOverlap(false); //Evitar que las transiciones se envien a la vez
+        getWindow().setReenterTransition(slideBottom);
+
 
         albumList = new ArrayList<>();
         adapter = new AlbumsAdapter(this, albumList);
@@ -56,6 +69,9 @@ public class EpisodeActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
+
     }
 
     /**

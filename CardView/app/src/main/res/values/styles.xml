@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -15,22 +16,25 @@
         <item name="colorAccent">@color/green_200</item>
         <item name="android:windowBackground">@android:color/background_dark</item>
     </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="NewTheme" parent="Theme.AppCompat.Light.DarkActionBar" >
+    <style name="NewTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/green_600</item>
         <item name="colorPrimaryDark">@color/green_600</item>
         <item name="colorAccent">@color/green_200</item>
         <item name="android:colorBackground">@color/green</item>
     </style>
-<style name="title1">
-    <item name="android:layout_width">wrap_content</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:textColor">#ffffff</item>
-    <item name="android:textSize">30dp</item>
-    <item name="android:text">@string/backdrop_title</item>
-    <item name="android:typeface">serif</item>
+
+    <style name="title1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:text">@string/backdrop_title</item>
+        <item name="android:typeface">serif</item>
 
 
     </style>
@@ -47,7 +51,6 @@
     </style>
 
 
-
     <style name="subTitle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -58,9 +61,9 @@
     </style>
 
     <style name="Nombre_Cancion">
-      <item name= "android:layout_width"> wrap_content</item>
-       <item name= "android:layout_height">wrap_content</item>
-        <item name= "android:layout_marginBottom">24dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">24dp</item>
 
 
         android:textSize="30sp"
@@ -68,11 +71,14 @@
 
     </style>
 
+    <style name="NewTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
+    <style name="NewTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-
-
-
+    <style name="NewTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>
